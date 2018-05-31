@@ -175,6 +175,144 @@ do
 			echo "OPERATION COMPLETED!"
 			sleep 1
 		fi
+
+	elif [ $CHOICE = 4 ]; then
+		echo "Select the command you would like to execute:"
+		echo ""
+		echo "1. Show hidden files and folders"
+		echo "2. Hide hidden files and folders"
+		echo ""
+		read -p "Enter the number of your choice: " SECONDCHOICE
+		echo ""
+
+		if [ $SECONDCHOICE = 1 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Enabling hidden files and folders..."
+			echo ""
+			sleep 2
+			defaults write com.apple.finder AppleShowAllFiles -bool TRUE
+			killall Finder
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		elif [ $SECONDCHOICE = 2 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Disabling hidden files and folders..."
+			echo ""
+			sleep 2
+			defaults write com.apple.finder AppleShowAllFiles -bool FALSE
+			killall Finder
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		fi
+
+	elif [ $CHOICE = 5 ]; then
+		echo "Select the command you would like to execute:"
+		echo ""
+		echo "1. Stress test this computer"
+		echo "2. Check the uptime of this Mac"
+		echo ""
+		read -p "Enter the number of your choice: " SECONDCHOICE
+		echo ""
+
+		if [ $SECONDCHOICE = 1 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Stress testing this computer..."
+			echo ""
+			echo "Utilizing 100% of the CPU"
+			echo ""
+			echo "Press Control + C to cancel."
+			echo ""
+			sleep 2
+			yes
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		elif [ $SECONDCHOICE = 2 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Checking the uptime of this Mac..."
+			echo ""
+			sleep 2
+			uptime
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		fi
+
+	elif [ $CHOICE = 6 ]; then
+		echo "Select the command you would like to execute:"
+		echo ""
+		echo "1. Check for software updates"
+		echo "2. Update software, if new software is available"
+		echo ""
+		read -p "Enter the number of your choice: " SECONDCHOICE
+		echo ""
+
+		if [ $SECONDCHOICE = 1 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Checking for software update..."
+			echo ""
+			echo "Please be patient. This may take a few minutes."
+			echo ""
+			sleep 2
+			sudo softwareupdate -l
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		elif [ $SECONDCHOICE = 2 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Updating software..."
+			echo ""
+			echo "Please be patient. This may take a few minutes."
+			echo ""
+			sleep 2
+			sudo softwareupdate -ia
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		fi
+
+	elif [ $CHOICE = 7 ]; then
+		echo "Select the command you would like to execute:"
+		echo ""
+		echo "1. Get network IP address"
+		echo "2. Get external IP address"
+		echo "3. Test network connectivity to apple.com"
+		echo ""
+		read -p "Enter the number of your choice: " SECONDCHOICE
+		echo ""
+		
+		if [ $SECONDCHOICE = 1 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Getting network IP address."
+			echo ""
+			sleep 2
+			ipconfig getifaddr en1
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		elif [ $SECONDCHOICE = 2 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Getting external IP address."
+			echo ""
+			sleep 2
+			curl ipecho.net/plain; echo
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		elif [ $SECONDCHOICE = 3 ]; then
+			echo "Executing..."
+			echo ""
+			echo "Testing network connectivity to apple.com"
+			echo ""
+			echo "Press Control + C to cancel."
+			echo ""
+			sleep 2
+			ping -c 10 www.apple.com
+			echo "OPERATION COMPLETED!"
+			sleep 1
+		fi
 	fi
 
 	echo ""
@@ -182,3 +320,5 @@ do
 	echo ""
 
 done
+
+killall Terminal
