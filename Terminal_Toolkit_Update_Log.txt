@@ -1,0 +1,118 @@
+Terminal Toolkit Update Log
+
+Version 1.0
+
+This is the initial release of the script, featuring a if-statement-only structure and individual variables for each command. Once the user-selected command was run, the Terminal was terminated using the 'killall Terminal' command. The following commands were included in the script:
+
+1. killall Finder ('killall Finder')
+
+2. killall Dock ('killall Dock')
+
+3. killall SystemUIServer ('killall SystemUIServer')
+
+4. caffeinate indefinitely until user cancels ('caffeinate')
+
+5. caffeinate for a user-specified amount of seconds ('caffeinate -t $CTIMES')
+
+6. caffeinate for a user-specified amount of minutes ('caffeinate -t $CTIMES')
+
+7. caffeinate for a user-specified amount of hours ('caffeinate -t $CTIMES')
+
+8. Disable screenshot drop shadows ('defaults write com.apple.screencapture disable-shadow -bool TRUE')
+
+9. Enable screenshot drop shadows ('defaults write com.apple.screencapture disable-shadow -bool FALSE')
+
+10. Change screenshot file format to PDF ('defaults write com.apple.screencapture type PDF')
+
+11. Change screenshot file format to PNG ('defaults write com.apple.screencapture type png')
+
+12. Change screenshot file format to JPG ('defaults write com.apple.screencapture type jpg')
+
+13. Show hidden files and folders ('defaults write com.apple.finder AppleShowAllFiles -bool TRUE')
+
+14. Hide hidden files and folders ('defaults write com.apple.finder AppleShowAllFiles -bool FALSE')
+
+15. Stress test this computer ('yes')
+
+16. Check the uptime of this Mac ('uptime')
+
+17. Check for software updates ('sudo softwareupdate -l')
+
+18. Update software, if new software is available ('sudo softwareupdate -ia')
+
+19. Run the last non-sudo command again ('!!')
+
+20. Run the last sudo command again ('sudo !!')
+
+21. Shut down this Mac immediately ('sudo shutdown -h now')
+
+22. Restart this Mac immediately ('sudo shutdown -r now')
+
+23. Restart this Mac with a time delay in seconds ('echo Executing restart in $RTIMES seconds…')
+
+24. Restart this Mac with a time delay in minutes ('sudo shutdown -r +$RTIMEM')
+
+25. Restart this Mac with a time delay in hours ('sudo shutdown -r +$RTIMEM')
+
+26. Get network IP address ('ipconfig getifaddr en1')
+
+27. Get external IP address ('curl ipecho.net/plain; echo')
+
+28. Test network connectivity to apple.com ('ping -c 10 www.apple.com')
+
+29. Turn off Mac Dashboard ('defaults write com.apple.dashboard mcx-disabled -boolean TRUE')
+
+30. Turn on Mac Dashboard ('defaults write com.apple.dashboard mcx-disabled -boolean FALSE')
+
+31. Display all active system processes ('top')
+
+32. Exit ('killall Terminal')
+
+
+Version 2.0
+
+This is the first major update made to the structure of the script. This update features loops, nested if-statements, and same-line text entry. Also, the variable structure was vastly simplified from over 30 variables to just 4. Additionally, the commands list has been consolidated into a list of 8 categorized options, instead of listing out every individual command on the opening page. The following commands are featured in this update:
+
+1. killall Finder ('killall Finder')
+
+2. killall Dock ('killall Dock')
+
+3. killall SystemUIServer ('killall SystemUIServer')
+
+4. Prevent display from sleeping ('caffeinate -d')
+
+5. Prevent system from idle sleep ('caffeinate -i')
+
+6. Prevent system from sleeping (only works on AC power) ('caffeinate -s')
+
+7. Declare that the system user is active ('caffeinate -u')
+
+8. Specify a the duration of time to timeout ('caffeinate -t $CAFFTIME')
+
+9. Disable screenshot drop shadows ('defaults write com.apple.screencapture disable-shadow -bool TRUE')
+
+10. Enable screenshot drop shadows ('defaults write com.apple.screencapture disable-shadow -bool FALSE')
+
+11. Change screenshot file format to PDF ('defaults write com.apple.screencapture type PDF')
+
+12. Change screenshot file format to PNG ('defaults write com.apple.screencapture type png')
+
+13. Change screenshot file format to JPG ('defaults write com.apple.screencapture type jpg')
+
+14. Show hidden files and folders ('defaults write com.apple.finder AppleShowAllFiles -bool TRUE')
+
+15. Hide hidden files and folders ('defaults write com.apple.finder AppleShowAllFiles -bool FALSE')
+
+16. Stress test this computer ('yes')
+
+17. Check the uptime of this Mac ('uptime')
+
+18. Check for software updates ('sudo softwareupdate -l')
+
+19. Update software, if new software is available ('sudo softwareupdate -ia')
+
+20. Get network IP address ('ipconfig getifaddr en1')
+
+21. Get external IP address ('curl ipecho.net/plain; echo')
+
+22. Test network connectivity to apple.com ('ping -c 10 www.apple.com')
