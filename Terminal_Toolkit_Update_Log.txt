@@ -143,3 +143,14 @@ This update features several small improvements and bug fixes on major version 2
 3. Various blank echo statements were added to the script for proper/consistent spacing between lines.
 
 4. Removed the 'killall Terminal' command at the end of the script due to a misunderstanding as to what it actually does. The desired outcome was to close the current Terminal window ONLY, but I have been informed that this closes all Terminal windows.
+
+
+Version 2.2
+
+This update features several changes to the stress test commands, including the addition of two new commands. Here is a complete changelog for this version:
+
+1. Added two new stress test commands for dual-core processors and quad-core processors ($CHOICE = 5 > $SECONDCHOICE = 2,3).
+
+2. Updated the verbiage of the command listed under $CHOICE = 5 > $SECONDCHOICE = 1 (stress test single core).
+
+3. For all three stress test commands, the user now has the option to open the Activity Monitor application prior to performing the test.
