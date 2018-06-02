@@ -116,3 +116,30 @@ This is the first major update made to the structure of the script. This update 
 21. Get external IP address ('curl ipecho.net/plain; echo')
 
 22. Test network connectivity to apple.com ('ping -c 10 www.apple.com')
+
+
+Version 2.1
+
+This update features several small improvements and bug fixes on major version 2.0. The following changes were made:
+
+1. Line 170 in version 2.0: The echo statement was incorrect, changed "PNG" to "JPG"
+
+2. $CHOICE = 5 > $SECONDCHOICE = 1 (Lines 219-231 in version 2.0): There were several problems with this stress test command. The following changes were made to this portion of code:
+	
+	1. Replaced the 'yes' command with 'yes > /dev/null & yes > /dev/null &'. Both of these commands do roughly the same thing (they both max out a single core of the computer's CPU), but the new command is generally more accepted and more versatile.
+
+	2. Added a y/n question asking the user if they are sure they would like to stress test their computer. The inclusion of this new code also calls a new variable: $STRESSCHOICE
+
+	3. Included a portion of code that asks the user how long they would like to stress test the computer for. The inclusion of this new code also calls a new variable: $STRESSSECONDS
+
+	4. Removed the following echo statement: "echo "Utilizing 100% of the CPU"". Replaced this statement with "echo "Stress testing single CPU core..."".
+
+	5. Added a 'sleep $STRESSSECONDS' command to have the Terminal wait (test) for the user-specified amount of time.
+
+	6. Added the 'killall yes' command after the main stress test command has been executed for the user-specified amount of time. This command ends the 'yes' process.
+
+	7. Removed the echo statement: "echo "Press Control + C to cancel."" as this is not accurate.
+
+3. Various blank echo statements were added to the script for proper/consistent spacing between lines.
+
+4. Removed the 'killall Terminal' command at the end of the script due to a misunderstanding as to what it actually does. The desired outcome was to close the current Terminal window ONLY, but I have been informed that this closes all Terminal windows.
