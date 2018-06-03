@@ -154,3 +154,8 @@ This update features several changes to the stress test commands, including the 
 2. Updated the verbiage of the command listed under $CHOICE = 5 > $SECONDCHOICE = 1 (stress test single core).
 
 3. For all three stress test commands, the user now has the option to open the Activity Monitor application prior to performing the test.
+
+
+Version 2.2.1
+
+This minor update adds the new variable declaration ($AMCHOICE) from version 2.2 to the program. In addition, these variables have been sorted into a more logical format.

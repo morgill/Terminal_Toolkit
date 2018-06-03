@@ -3,15 +3,16 @@
 # Version: 2.1
 # Created by: Mason Orgill
 
-REPEATCHOICE="y"
 CHOICE=1
 SECONDCHOICE=1
 CAFFTIME=0
-STRESSCHOICE="n"
 STRESSSECONDS=0
+REPEATCHOICE="y"
+STRESSCHOICE="n"
+AMCHOICE="y"
 
 echo ""
-echo "TERMINAL TOOLKIT 2.2"
+echo "TERMINAL TOOLKIT 2.2.1"
 echo ""
 echo "Created by: Mason Orgill"
 echo ""

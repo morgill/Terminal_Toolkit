@@ -11,7 +11,7 @@ STRESSCHOICE="n"
 STRESSSECONDS=0
 
 echo ""
-echo "TERMINAL TOOLKIT 2.1"
+echo "TERMINAL TOOLKIT 2.2"
 echo ""
 echo "Created by: Mason Orgill"
 echo ""
